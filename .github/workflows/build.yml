@@ -32,11 +32,8 @@ jobs:
     - name: Accept Android licenses
       run: yes | sdkmanager --licenses || true
 
-    - name: Grant execute permission to gradlew
+    - name: Make gradlew executable
       run: chmod +x gradlew
-
-    - name: Generate Gradle wrapper
-      run: ./gradlew wrapper --gradle-version=8.4 --distribution-type all
 
     - name: Build Debug APK
       run: ./gradlew assembleDebug --no-daemon --stacktrace
