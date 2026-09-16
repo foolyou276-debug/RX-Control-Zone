@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Device header bar -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📱 DEVICE"
+        android:textColor="#00E5FF"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:background="#0D1117"/>
+
+    <!-- Terminal output -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="#000000"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#33FF33"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="2dp"/>
+
+    </ScrollView>
+
+    <!-- Input bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#0D1117"
+        android:padding="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RX$ "
+            android:textColor="#00E5FF"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etCommand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="command..."
+            android:hintTextColor="#333355"
+            android:textColor="#33FF33"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:background="@null"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="▶"
+            android:textColor="#000000"
+            android:background="#00E5FF"
+            android:textSize="14sp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"/>
+
+    </LinearLayout>
+</LinearLayout>
