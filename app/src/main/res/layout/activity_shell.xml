@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="command..."
-            android:hintTextColor="#333355"
+            android:textColorHint="#333355"
             android:textColor="#33FF33"
             android:textSize="14sp"
             android:fontFamily="monospace"
